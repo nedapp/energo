@@ -47,6 +47,9 @@
 			</div>
 		</div>
 		<div class="en-nav">
+			<div class="en-nav-beginning" >&nbsp</div>
+			<img class="en-logo" src="<?php echo get_template_directory_uri(); ?>/images/design-images/logo.png" />
+			<div class="en-nav-home" > <a> Početna </a></div>
 			<?php wp_nav_menu(array('menu_class' => 'en-nav-bar')); ?>
 		</div>
 		
