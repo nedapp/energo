@@ -27,12 +27,21 @@
 
 .en-nav-bar {
   list-style: none;
-  
+  font-size: 14px;
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 50px;
  }
 
 .en-nav-bar > li {
   float: left;
-  width: 200px;
+  padding-right: 40px;
+  text-transform: uppercase;
+}
+
+.en-nav-bar > li a {
+  color: white;
+  font-weight: bold;
 }
 
 .en-nav-bar > li > ul{
@@ -45,5 +54,21 @@
 }
 
 .en-nav-bar > li:hover > ul{
-  display: block;
+  text-transform: none;
+  display: inline-block;
+  position: absolute;
+  background-image: url('images/design-images/bg-nav-submenu.png');
+  background-repeat: repeat-x repeat-y;
+  width: 300px;
+  margin-left: -10px;
+}
+
+.en-nav-bar > li:hover > ul a{
+  padding: 10px;
+  line-height: 30px;
+  font-weight: normal
+}
+
+.en-nav-bar > li:hover > ul a:hover {
+  color: #249B19;
 }
