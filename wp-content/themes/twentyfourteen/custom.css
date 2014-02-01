@@ -1,0 +1,49 @@
+.en-home {
+  background-image: url('images/background-images/home.jpg');
+  background-size: 100% 100%;
+}
+
+.en-top-bar {
+  width: 1000px;
+  height: 45px;
+  margin: 0 auto;
+}
+
+/* override qTranslate plugin */
+.qtrans_language_chooser { list-style-type:none }
+.qtrans_language_chooser li { float:left; margin-right:3px }
+.qtrans_flag { width: 25px !important; height: 25px !important; }
+
+.en-language-chooser {
+  float: right;
+  margin: 10px 0px;
+}
+
+.en-nav {
+  height: 120px;
+  background-image: url('images/design-images/bg-nav.png');
+  background-repeat: repeat-x;
+}
+
+.en-nav-bar {
+  list-style: none;
+  
+ }
+
+.en-nav-bar > li {
+  float: left;
+  width: 200px;
+}
+
+.en-nav-bar > li > ul{
+  display: none;
+}
+
+.en-nav-bar > li > ul{
+  list-style: none;
+  margin: 0px;
+}
+
+.en-nav-bar > li:hover > ul{
+  display: block;
+}
