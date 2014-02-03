@@ -1,7 +1,6 @@
 * { margin: 0; padding: 0px; }
 
 .en-home {
-  background-image: url('images/background-images/home.jpg');
   background-size: 100% 100%;
 }
 
@@ -132,7 +131,7 @@
 }
 
 .en-page {
-  height: 1000px;
+  height: 1100px;
 }
 
 .en-content {

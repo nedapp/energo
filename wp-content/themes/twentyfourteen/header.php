@@ -33,11 +33,12 @@
 
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
-		$('body').attr('class', 'en-home');
+		var number = Math.floor((Math.random()*10)+1)
+		$('body').css('background-image', 'url(<?php echo get_template_directory_uri(); ?>/images/background-images/' + number + '.jpg)');
 	});
 </script>
 
-<body>
+<body class="en-home">
 <div>
 	
 	<header class="en-header" role="banner">
