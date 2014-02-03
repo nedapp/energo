@@ -1,4 +1,12 @@
-* { margin: 0; padding: 0px; }
+
+html {
+	min-height: 100%;
+}
+
+body {
+	font-family: sans-serif;
+	margin: 0;
+}
 
 .en-home {
   background-size: 100% 100%;
@@ -67,7 +75,7 @@
   background-repeat: repeat-x;
   list-style: none;
   font-size: 14px;
-  width: 1200px;
+  min-width: 850px;
   margin-left: 565px;
   padding-left: 20px;
  }
@@ -83,6 +91,7 @@
 .en-nav-bar > li a {
   color: white;
   font-weight: bold;
+    text-decoration: none;
 }
 
 .en-nav-bar > li > ul{
@@ -135,7 +144,7 @@
 }
 
 .en-content {
-  width: 720px;
+  width: 800px;
 
   background-color: rgba(0, 0, 0, 0.1);
   
@@ -145,20 +154,61 @@
   font-weight: normal;
   font-size: 14px;
 
-  -webkit-border-top-right-radius: 20px; 
-  -moz-border-radius-topright: 20px; 
-  border-top-right-radius: 20px; 
-  -webkit-border-bottom-right-radius: 20px; 
-  -moz-border-radius-bottomright: 20px; 
-  border-top-bottom-radius: 20px; 
+  border-radius: 0px 20px 20px 0px;
 
   border-left: #249B19 solid 5px;
   
 }
 
+.en-content .entry-content {
+	padding: 15px;
+	text-align: justify;
+}
+
+
 h1.entry-title {
   font-size: 16px;
   font-weight: bold;
   text-transform: none;
-  padding-top: 10px;
+  padding: 15px 15px 0;
+}
+
+#secondary {
+	display: none;
+}
+
+/* plugins ---------------------------------------------------------- */
+/* contact form 7 */
+.en-content .entry-content .wpcf7 {
+	width: 360px;
+	display: inline-block;
+	margin-right: 15px;
+}
+
+.en-content .entry-content .wpcf7 .field-title,
+.en-content .entry-content .wpcf7 input[type="submit"] {
+	background-color: #249B19;
+	color: #ffffff;
+	padding: 6px;
+}
+
+.en-content .entry-content .wpcf7 .wpcf7-form-control-wrap {
+	background-color: #333333;
+	display: block;
+	padding: 15px 20px;
+	border-radius: 0 0 40px 40px;
+}
+
+.en-content .entry-content .wpcf7 .wpcf7-form-control {
+	background-color: #333333;
+	color: #ffffff;
+	border: none;
+	max-width: 320px;
+}
+
+/* wp google maps */
+#wpgmza_map {
+	display: inline-block !important;
+	max-width: 390px;
+	vertical-align: top;
 }
