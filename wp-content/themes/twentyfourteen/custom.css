@@ -1,3 +1,5 @@
+* { margin: 0; padding: 0px; }
+
 .en-home {
   background-image: url('images/background-images/home.jpg');
   background-size: 100% 100%;
@@ -73,9 +75,10 @@
 
 .en-nav-bar > li {
   float: left;
-  padding-right: 40px;
+  padding-right: 20px;
   padding-top: 40px;
   text-transform: uppercase;
+  position: relative;
 }
 
 .en-nav-bar > li a {
@@ -94,12 +97,14 @@
 
 .en-nav-bar > li:hover > ul{
   text-transform: none;
-  display: inline-block;
+  display: block;
   position: absolute;
   background-image: url('images/design-images/bg-nav-submenu.png');
   background-repeat: repeat-x repeat-y;
   width: 300px;
+  margin-top: 4px;
   margin-left: -10px;
+  z-index: 5;
 }
 
 .en-nav-bar > li:hover > ul a{
@@ -110,6 +115,20 @@
 
 .en-nav-bar > li:hover > ul a:hover {
   color: #249B19;
+}
+
+.en-nav-bar > li > a:after {
+  content: ''; 
+  background-image: url('images/design-images/white-carret.png');
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.en-nav-bar li > a:only-child:after {
+  content: ''; 
+  background-image: none;
 }
 
 .en-page {
