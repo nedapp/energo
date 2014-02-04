@@ -214,3 +214,52 @@ h1.entry-title {
 	max-width: 390px;
 	vertical-align: top;
 }
+
+/* nextgen gallery */
+.entry-content .ngg-galleryoverview {
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 0 20px 20px 0;
+	margin-left: -15px;
+	padding: 40px 0;
+	width: 800px;
+}
+
+.ngg-galleryoverview .gallery-arrow {
+	background-image: url("images/design-images/arrow-left.png");
+	background-position: 0px 30px;
+	background-repeat: no-repeat;
+	height: 108px;
+	width: 44px;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.ngg-galleryoverview .gallery-arrow:active {
+	background-position: 0 32px;
+	background-size: 44px auto;
+}
+
+.ngg-galleryoverview .gallery-arrow.right {
+	background-image: url("images/design-images/arrow-right.png");
+}
+
+.ngg-galleryoverview > div {
+	float: left;
+}
+
+.ngg-galleryoverview .gallery-slider-wrapper {
+	margin: 0 10px;
+	overflow: hidden;
+	width: 690px;
+	position: relative;
+}
+
+.ngg-galleryoverview .gallery-slider {
+	white-space: nowrap;
+	position: relative;
+}
+
+.ngg-galleryoverview .gallery-slider > div {
+	display: inline-block;
+	float: none;
+}
