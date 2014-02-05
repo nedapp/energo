@@ -48,7 +48,7 @@
 			<form action="<?php echo home_url( '/' ); ?>" class="search-form" method="get" role="search">
 				<input type="search" name="s" value="" class="search-field">
 			</form>
-			<a href="/linkovi" class="links">Linkovi</a>
+			<a href="/linkovi" class="links"><?php if(isset($_GET['lang'])) echo "Links"; else echo "Linkovi";?></a>
 		</div>
 		<div class="en-nav">
 			<div class="en-nav-beginning" >&nbsp</div>
