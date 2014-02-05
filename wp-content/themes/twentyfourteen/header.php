@@ -45,6 +45,10 @@
 			<div class="en-language-chooser">
 				<?php echo qtrans_generateLanguageSelectCode('image'); ?>
 			</div>
+			<form action="<?php echo home_url( '/' ); ?>" class="search-form" method="get" role="search">
+				<input type="search" name="s" value="" class="search-field">
+			</form>
+			<a href="/linkovi" class="links">Linkovi</a>
 		</div>
 		<div class="en-nav">
 			<div class="en-nav-beginning" >&nbsp</div>

@@ -18,6 +18,34 @@ body {
   margin: 0 auto;
 }
 
+.en-top-bar .links {
+	float: right;
+	padding-top: 27px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #000000;
+	margin-right: 20px;
+}
+
+.en-top-bar .search-form {
+	background-image: url("images/design-images/search.png");
+	background-position: 0 21px;
+	background-repeat: no-repeat;
+	background-size: 170px auto;
+	float: right;
+	margin-right: 20px;
+	padding-bottom: 8px;
+	padding-left: 32px;
+	padding-top: 25px;
+	width: 140px;
+}
+
+.en-top-bar .search-form input {
+	background: none;
+	border: none;
+	width: 130px;
+}
+
 /* override qTranslate plugin */
 .qtrans_language_chooser { list-style-type:none }
 .qtrans_language_chooser li { float:left; margin-right:3px }
