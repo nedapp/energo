@@ -262,4 +262,33 @@ h1.entry-title {
 .ngg-galleryoverview .gallery-slider > div {
 	display: inline-block;
 	float: none;
+  padding-top: 10px;
+}
+
+.en-archive-header {
+  margin: 24px auto;
+}
+
+.en-archive-title {
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  padding-left: 30px;
+}
+
+.en-no-posts {
+  padding-left: 30px;
+  padding-bottom: 30px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.entry-meta {
+  display: none;
+}
+
+a.next.page-numbers, 
+a.prev.page-numbers {
+  display: none;
 }
