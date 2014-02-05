@@ -93,9 +93,12 @@ body {
   text-transform: uppercase;
   border-right: #249B19 solid 5px;
   margin-top: 40px;
+	text-decoration: none;
 }
 
-
+.en-nav-home a:hover {
+	color: #249B19;
+}
 
 .en-nav-bar {
   height: 65px;
@@ -121,6 +124,10 @@ body {
   color: white;
   font-weight: bold;
     text-decoration: none;
+}
+
+.en-nav-bar > li a:hover {
+	color: #249B19;
 }
 
 .en-nav-bar > li > ul{
