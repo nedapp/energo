@@ -112,50 +112,52 @@ $this->start_element('nextgen_gallery.gallery_container', 'container', $displaye
 <?php $this->end_element(); ?>
 
 <script type="text/javascript">
-	var slider = jQuery('.gallery-slider'),
-		lastImage = slider.find('.ngg-gallery-thumbnail-box:last'),
-		maxLeft = slider.width(),
-		currentLeft,
-		previousLeft,
-		step = 50;
+	jQuery('.ngg-galleryoverview').each(function () {
+		var gallery = jQuery(this);
 
-	if (lastImage.length) {
-		maxLeft = lastImage.position().left + lastImage.width() - slider.width();
-		maxLeft = -maxLeft;
-		step = slider.width();
-	}
+		var slider = gallery.find('.gallery-slider'),
+			lastImage = slider.find('.ngg-gallery-thumbnail-box:last'),
+			maxLeft = slider.width(),
+			currentLeft,
+			previousLeft,
+			step = 50;
 
-
-	var slide = function (left) {
-		currentLeft = slider.position().left;
-		if (left) {
-			currentLeft -= step;
-			if (currentLeft < maxLeft) {
-				currentLeft = maxLeft;
-			}
-
-		} else {
-			currentLeft += step;
-			if (currentLeft > 0) {
-				currentLeft = 0;
-			}
-		}
-		if (currentLeft !== previousLeft) {
-			slider.animate({
-				left: currentLeft
-			}, 1000);
+		if (lastImage.length) {
+			maxLeft = lastImage.position().left + lastImage.width() - slider.width();
+			maxLeft = -maxLeft;
+			step = slider.width();
 		}
 
-		previousLeft = currentLeft;
-	};
+		var slide = function (left) {
+			currentLeft = slider.position().left;
+			if (left) {
+				currentLeft -= step;
+				if (currentLeft < maxLeft) {
+					currentLeft = maxLeft;
+				}
 
-	jQuery('.gallery-arrow.left').on('click', function () {
-		slide(true);
+			} else {
+				currentLeft += step;
+				if (currentLeft > 0) {
+					currentLeft = 0;
+				}
+			}
+			if (currentLeft !== previousLeft) {
+				slider.animate({
+					left: currentLeft
+				}, 1000);
+			}
+
+			previousLeft = currentLeft;
+		};
+
+		gallery.find('.gallery-arrow.left').on('click', function () {
+			slide(true);
+		});
+		gallery.find('.gallery-arrow.right').on('click', function () {
+			slide();
+		});
+
+
 	});
-	jQuery('.gallery-arrow.right').on('click', function () {
-		slide();
-	});
-
-
-
 </script>
