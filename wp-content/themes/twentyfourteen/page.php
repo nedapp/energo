@@ -13,7 +13,26 @@
 
 get_header(); ?>
 
+
+
+
 	<div class="en-page">
+
+		<?php if(is_page('kontakt')) { ?>
+		<div class="en-contact-details">
+			<b>OFFICE</b>
+			<br/>
+			<br/>
+			Bulevar Mihajla Pupina 115 V/6
+			<br/>
+			11070 Beograd
+			<br/>
+			Republika Srbija
+			<br/>
+		</div>
+	<?php } ?>
+
+
 		<div class="en-content">
 			<?php
 				// Start the Loop.
@@ -26,6 +45,8 @@ get_header(); ?>
 				endwhile;
 			?>
 		</div>
+
+
 	<?php if (is_front_page()) {?>
 		<div class="en-home-content">
 			<div class="en-home-content-part">
@@ -46,7 +67,7 @@ get_header(); ?>
 				<div class="content down">NIS Energowind osnovana je 2005. godine kao privatno drustvo sa ogranicenom odgovornoscu, sa namerom razvoja energije vetra.</div>
 			</div>
 		</div>
-	<?php }?>
+	<?php } ?>
 	</div>
 <?php
 get_footer();

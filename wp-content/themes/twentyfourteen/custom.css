@@ -399,3 +399,9 @@ a.next.page-numbers,
 a.prev.page-numbers {
   display: none;
 }
+
+.en-contact-details {
+  margin-top: 80px;
+  float: left;
+  margin-left: -185px;
+}
