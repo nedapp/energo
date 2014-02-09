@@ -263,16 +263,17 @@ class BWGViewThumbnails {
       }
     </style>
 
-    <div id="bwg_container1_<?php echo $bwg; ?>">
+    <div id="bwg_container1_<?php echo $bwg; ?>" class="gallery-container">
       <div id="bwg_container2_<?php echo $bwg; ?>">
         <form id="gal_front_form_<?php echo $bwg; ?>" method="post" action="#">
-          <div style="background-color:rgba(0, 0, 0, 0); text-align:center; width:100%;">
+<div class="gallery-arrow left"></div>
+          <div style="background-color:rgba(0, 0, 0, 0); text-align:center;" class="gallery-slider-wrapper">
             <?php
             if ($params['image_enable_page']  && $params['images_per_page'] && ($theme_row->page_nav_position == 'top')) {
               WDWLibrary::ajax_html_frontend_page_nav($theme_row, $page_nav['total'], $page_nav['limit'], 'gal_front_form_' . $bwg, $params['images_per_page'], $bwg, 'bwg_standart_thumbnails_' . $bwg);
             }
             ?>
-            <div id="bwg_standart_thumbnails_<?php echo $bwg; ?>" class="bwg_standart_thumbnails_<?php echo $bwg; ?>">
+            <div id="bwg_standart_thumbnails_<?php echo $bwg; ?>" class="bwg_standart_thumbnails_<?php echo $bwg; ?> gallery-slider">
               <div id="ajax_loading_<?php echo $bwg; ?>" style="position:absolute;">
                 <div id="opacity_div_<?php echo $bwg; ?>" style="display:none; background-color:#FFFFFF; opacity:0.7; filter:Alpha(opacity=70); position:absolute; z-index:105;"></div>
                 <span id="loading_div_<?php echo $bwg; ?>" style="display:none; text-align:center; position:relative; vertical-align:middle; z-index:107">
@@ -329,7 +330,7 @@ class BWGViewThumbnails {
                 $thumb_left = ($params['thumb_width'] - $image_thumb_width) / 2;
                 $thumb_top = ($params['thumb_height'] - $image_thumb_height) / 2;
                 ?>
-                <a style="font-size: 0;" href="javascript:spider_createpopup('<?php echo addslashes(add_query_arg($params_array, admin_url('admin-ajax.php'))); ?>', '<?php echo $bwg; ?>', '<?php echo $params['popup_width']; ?>', '<?php echo $params['popup_height']; ?>', 1, 'testpopup', 5);">
+                <a class="gallery-image" style="font-size: 0;" href="javascript:spider_createpopup('<?php echo addslashes(add_query_arg($params_array, admin_url('admin-ajax.php'))); ?>', '<?php echo $bwg; ?>', '<?php echo $params['popup_width']; ?>', '<?php echo $params['popup_height']; ?>', 1, 'testpopup', 5);">
                   <span class="bwg_standart_thumb_<?php echo $bwg; ?>">
                     <span class="bwg_standart_thumb_span1_<?php echo $bwg; ?>">
                       <span class="bwg_standart_thumb_span2_<?php echo $bwg; ?>">
@@ -369,11 +370,72 @@ class BWGViewThumbnails {
               ?>
             </div>
             <?php
-            if ($params['image_enable_page']  && $params['images_per_page'] && ($theme_row->page_nav_position == 'bottom')) {
+            /*if ($params['image_enable_page']  && $params['images_per_page'] && ($theme_row->page_nav_position == 'bottom')) {
               WDWLibrary::ajax_html_frontend_page_nav($theme_row, $page_nav['total'], $page_nav['limit'], 'gal_front_form_' . $bwg, $params['images_per_page'], $bwg, 'bwg_standart_thumbnails_' . $bwg);
-            }
+            }*/
             ?>
+<script type="text/javascript">
+	jQuery(document).ready(function () {
+
+		if (window.galleryInitialized) {
+			return;
+		} else {
+			window.galleryInitialized = true;
+		}
+
+		jQuery('.gallery-container').each(function () {
+			var gallery = jQuery(this);
+
+			var sliderWrapper = gallery.find('.gallery-slider-wrapper'),
+				slider = gallery.find('.gallery-slider'),
+				lastImage = slider.find('.gallery-image:last'),
+				maxLeft = slider.width(),
+				currentLeft,
+				previousLeft,
+				step = 50;
+
+			if (lastImage.length) {
+				maxLeft = lastImage.position().left + lastImage.width() - sliderWrapper.width();
+				maxLeft = -maxLeft;
+				step = slider.width();
+			}
+			console.log(maxLeft);
+			var slide = function (left) {
+				currentLeft = slider.position().left;
+				if (left) {
+					currentLeft -= step;
+					if (currentLeft < maxLeft) {
+						currentLeft = maxLeft;
+					}
+
+				} else {
+					currentLeft += step;
+					if (currentLeft > 0) {
+						currentLeft = 0;
+					}
+				}
+				if (currentLeft !== previousLeft) {
+					slider.animate({
+						left: currentLeft
+					}, 1000);
+				}
+
+				previousLeft = currentLeft;
+			};
+
+			gallery.find('.gallery-arrow.left').on('click', function () {
+				slide(true);
+			});
+			gallery.find('.gallery-arrow.right').on('click', function () {
+				slide();
+			});
+
+
+		});
+	});
+</script>
           </div>
+<div class="gallery-arrow right"></div>
         </form>
         <div id="spider_popup_loading_<?php echo $bwg; ?>" class="spider_popup_loading"></div>
         <div id="spider_popup_overlay_<?php echo $bwg; ?>" class="spider_popup_overlay" onclick="spider_destroypopup(1000)"></div>

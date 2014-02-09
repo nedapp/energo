@@ -322,16 +322,17 @@ h1.entry-title {
 	vertical-align: top;
 }
 
-/* nextgen gallery */
-.entry-content .ngg-galleryoverview {
+/* gallery */
+.gallery-container {
 	background-color: rgba(0, 0, 0, 0.6);
 	border-radius: 0 20px 20px 0;
 	margin-left: -15px;
+	margin-top: 15px;
 	padding: 40px 0;
 	width: 800px;
 }
 
-.ngg-galleryoverview .gallery-arrow {
+.gallery-arrow {
 	background-image: url("images/design-images/arrow-left.png");
 	background-position: 0px 30px;
 	background-repeat: no-repeat;
@@ -339,38 +340,37 @@ h1.entry-title {
 	width: 44px;
 	border-radius: 20px;
 	cursor: pointer;
+	display: inline-block;
 }
 
-.ngg-galleryoverview .gallery-arrow:active {
+.gallery-arrow:active {
 	background-position: 0 32px;
 	background-size: 44px auto;
 }
 
-.ngg-galleryoverview .gallery-arrow.right {
+.gallery-arrow.right {
 	background-image: url("images/design-images/arrow-right.png");
 }
 
-.ngg-galleryoverview > div {
-	float: left;
-}
-
-.ngg-galleryoverview .gallery-slider-wrapper {
+.gallery-slider-wrapper {
 	margin: 0 10px;
 	overflow: hidden;
-	width: 690px;
+	width: 680px;
 	position: relative;
+	display: inline-block;
 }
 
-.ngg-galleryoverview .gallery-slider {
+.gallery-slider {
 	white-space: nowrap;
 	position: relative;
+	max-width: none !important;
 }
 
-.ngg-galleryoverview .gallery-slider > div {
-	display: inline-block;
-	float: none;
-  padding-top: 10px;
+.spider_popup_overlay {
+	background: transparent !important;
 }
+
+
 
 .en-archive-header {
   margin: 24px auto;
@@ -405,3 +405,4 @@ a.prev.page-numbers {
   float: left;
   margin-left: -185px;
 }
+
