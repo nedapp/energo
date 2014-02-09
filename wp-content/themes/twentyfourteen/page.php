@@ -59,6 +59,7 @@ get_header(); ?>
 				<div class="delimiter"></div>
 				<div class="content down">Kompanija NIS Energowind doo osnovana je 2005. godine kao privatno drustvo sa ogranicenom odgovornoscu, sa namerom razvoja i eksploatacije energije vetra za potrebe proizvodnje
 					elektricne energije u Srbiji. 50% vlasnistva kompanije je posredno u rukama kompanije NIS, a preostalih 50% je u vlasnistvu privatnih investitora.
+					<img src="<?php echo get_template_directory_uri(); ?>/images/design-images/energo_logo.png"/>
 				</div>
 			</div>
 			<div class="en-home-content-part">

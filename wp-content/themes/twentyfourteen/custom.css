@@ -14,7 +14,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  overflow:hidden;
+  /*overflow:hidden;*/
 }
 
 .en-top-bar {
@@ -186,7 +186,8 @@ body {
 }
 
 .en-page {
-  height: 1100px;
+ /* height: 1100px;*/
+	margin-bottom: 30px;
 }
 
 .en-content {
@@ -257,6 +258,7 @@ h1.entry-title {
 	margin-top: 50px;
 	width: 1100px;
 	font-size: 14px;
+	height: 300px;
 }
 
 .en-home-content .title {
@@ -292,6 +294,10 @@ h1.entry-title {
 	background-color: rgba(0, 0, 0, 0.6);
 	color: #ffffff;
 	display: block;
+}
+
+.en-home-content .content img {
+	margin-left: 250px;
 }
 
 .en-home-content .content.up {
