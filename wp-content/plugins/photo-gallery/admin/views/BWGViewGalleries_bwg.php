@@ -37,6 +37,8 @@ class BWGViewGalleries_bwg {
       <div style="float:left; font-size: 14px; font-weight: bold;">
         This section allows you to create, edit and delete galleries.
         <a style="color: blue; text-decoration: none;" target="_blank" href="http://web-dorado.com/wordpress-gallery-guide-step-2.html">Read More in User Manual</a>
+
+		  <h1>Uputstvo za korišćenje galerije možete pogledati <a href="<?php echo get_template_directory_uri(); ?>/tutorials/Gallery.swf" target="_blank">ovde</a> </h1>
       </div>
       <div style="float: right; text-align: right;">
         <a style="color: red; text-decoration: none;" target="_blank" href="http://web-dorado.com/products/wordpress-photo-gallery-plugin.html">
