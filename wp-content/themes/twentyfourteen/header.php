@@ -53,7 +53,7 @@
 		<div class="en-nav">
 			<div class="en-nav-beginning" >&nbsp</div>
 			<a href="<?php echo home_url( '/' ); ?>"> <img class="en-logo" src="<?php echo get_template_directory_uri(); ?>/images/design-images/logo.png" /></a>
-			<div class="en-nav-home"><a href="<?php echo home_url( '/' ); ?>"><?php if(isset($_GET['lang'])) echo "Home"; else echo "Početna";?></a></div>
+			<div class="en-nav-home"><a <?php if(is_front_page()) echo "style='color:#249B19 !important'"; ?>  href="<?php echo home_url( '/' ); ?>"><?php if(isset($_GET['lang'])) echo "Home"; else echo "Početna";?></a></div>
 			<?php wp_nav_menu(array('menu_class' => 'en-nav-bar')); ?>
 		</div>
 		
