@@ -354,6 +354,14 @@ class BWGControllerGalleries_bwg {
     list($width, $height, $type) = getimagesize($original_filename);
     list($width_watermark, $height_watermark, $type_watermark) = getimagesize($watermark_url);
 
+	if ($width_watermark === null) {
+		global $WD_BWG_UPLOAD_DIR;
+		//replace http://site.com/wp_content/uploads/photo-gallery/logo.png with real system url
+		//c://xampp/htdocs/wp_content/uploads/photo-gallery/logo.png
+		$watermark_url = preg_replace("/.*\//", ABSPATH . $WD_BWG_UPLOAD_DIR . "/", $watermark_url);
+		list($width_watermark, $height_watermark, $type_watermark) = getimagesize($watermark_url);
+	}
+
     $watermark_width = $width * $watermark_width / 100;
     $watermark_height = $height_watermark * $watermark_width / $width_watermark;
         

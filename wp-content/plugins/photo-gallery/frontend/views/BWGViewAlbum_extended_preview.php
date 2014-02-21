@@ -397,7 +397,7 @@ class BWGViewAlbum_extended_preview {
     <div id="bwg_container1_<?php echo $bwg; ?>">
       <div id="bwg_container2_<?php echo $bwg; ?>">
         <form id="gal_front_form_<?php echo $bwg; ?>" method="post" action="#">
-          <div style="background-color:rgba(0, 0, 0, 0); text-align:center; width:100%;" class="gallery">
+          <div style="background-color:rgba(0, 0, 0, 0); text-align:center; width:100%;">
             <?php
             if ($params['extended_album_enable_page']  && $items_per_page && ($theme_row->page_nav_position == 'top') && $page_nav['total']) {
               WDWLibrary::ajax_html_frontend_page_nav($theme_row, $page_nav['total'], $page_nav['limit'], 'gal_front_form_' . $bwg, $items_per_page, $bwg, $album_gallery_div_id, $params['album_id']);
